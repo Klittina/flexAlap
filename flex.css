@@ -1,0 +1,63 @@
+@charset "utf-8";
+header,
+main,
+article,
+section,
+footer,
+nav {
+    border: 1px solid grey;
+}
+
+header {
+    background: red;
+}
+
+article {
+    background: gray;
+    /*gyerekelem*/
+    flex: 1 1 200px;
+}
+
+section {
+    display: flex;
+    /*flex-direction: column-reverse;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+}
+
+article:nth-child(1) {
+    order: 5;
+}
+
+article:nth-child(6) {
+    order: 6;
+}
+
+
+/*menu formázása*/
+
+nav a {
+    text-decoration: none;
+    display: block;
+}
+
+#listaval ul,
+#divekkel .menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#listaval {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:600px) {
+    section {
+        flex-direction: column;
+    }
+}
